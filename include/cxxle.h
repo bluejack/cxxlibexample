@@ -1,5 +1,5 @@
-#ifndef MOONDREAM_H
-#define MOONDREAM_H
+#ifndef CXXLE_H
+#define CXXLE_H
 
 #ifdef __cplusplus
 extern "C"
@@ -8,15 +8,15 @@ extern "C"
 
 #ifdef EXPORT_MY_LIBRARY
 #if defined(_WIN32) || defined(_WIN64)
-#define MOONDREAM_API __declspec(dllexport)
+#define CXXLE_API __declspec(dllexport)
 #else
-#define MOONDREAM_API __attribute__((visibility("default")))
+#define CXXLE_API __attribute__((visibility("default")))
 #endif
 #else
 #if defined(_WIN32) || defined(_WIN64)
-#define MOONDREAM_API __declspec(dllimport)
+#define CXXLE_API __declspec(dllimport)
 #else
-#define MOONDREAM_API
+#define CXXLE_API
 #endif
 #endif
 
@@ -26,10 +26,10 @@ extern "C"
   } cxxle_api;
 
   // Public API declarations
-  MOONDREAM_API cxxle_api *cxxle();
+  CXXLE_API cxxle_api *cxxle();
 
 #ifdef __cplusplus
 }
 #endif
 
-#endif // MOONDREAM_H
+#endif // CXXLE_H
