@@ -1,11 +1,6 @@
 #ifndef CXXLE_H
 #define CXXLE_H
 
-#ifdef __cplusplus
-extern "C"
-{
-#endif
-
 #ifdef EXPORT_MY_LIBRARY
 #if defined(_WIN32) || defined(_WIN64)
 #define CXXLE_API __declspec(dllexport)
@@ -20,16 +15,12 @@ extern "C"
 #endif
 #endif
 
-  typedef struct
-  {
-    void (*message)(const char *expr);
-  } cxxle_api;
+typedef struct
+{
+  void (*message)(const char *expr);
+} cxxle_api;
 
-  // Public API declarations
-  CXXLE_API cxxle_api *cxxle();
-
-#ifdef __cplusplus
-}
-#endif
+// Public API declarations
+CXXLE_API cxxle_api *cxxle();
 
 #endif // CXXLE_H
