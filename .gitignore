@@ -1,0 +1,57 @@
+# --- General ---
+*.o              # Object files
+*.obj            # Object files (Windows)
+*.so             # Shared libraries (Linux)
+*.a              # Static libraries
+*.lib            # Static libraries (Windows)
+*.dll            # Dynamic libraries (Windows)
+*.dylib          # Dynamic libraries (macOS)
+*.exe            # Executable files
+*.out            # Output files
+*.log            # Log files
+*.tmp            # Temporary files
+*.swp            # Swap files (e.g., Vim)
+*.bak            # Backup files
+
+# --- CMake Directories and Files ---
+**/cmake-build-debug
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/install_manifest.txt
+**/CMakeFiles/
+**/CTestTestfile.cmake
+**/Makefile
+**/*.cbp
+**/CMakeScripts
+**/compile_commands.json
+**/build/
+
+# --- IDE and Editor Files ---
+.idea/           # CLion, IntelliJ
+.vscode/         # VSCode settings
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+*.cbp            # Code::Blocks project files
+*.dsw            # DevStudio workspace files
+*.dsp            # DevStudio project files
+*.vcxproj        # Visual Studio project files
+*.vcxproj.user   # User-specific VS settings
+*.vs/            # Visual Studio cache
+
+# --- macOS Specific ---
+.DS_Store        # macOS Finder metadata
+._*              # macOS resource fork files
+
+# --- Generated API Documentation ---
+/docs/html/**     # Example for generated docs (Doxygen, etc.)
+
+# --- Archives ---
+*.tar
+*.gz
+*.zip
+*.7z
+*.rar
+
+# --- Exclude Test Output ---
+/test-results/
